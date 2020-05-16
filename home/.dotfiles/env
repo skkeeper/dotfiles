@@ -1,3 +1,5 @@
+PATH=$PATH:~/.dotfiles/bin
+
 [ -x "$(command -v nvim)" ] && export EDITOR=nvim
 
 ZSH_AUTOSUGGEST_STRATEGY=completion
