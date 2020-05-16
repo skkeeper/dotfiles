@@ -1,0 +1,10 @@
+#!/bin/sh
+
+# https://gist.github.com/steinwaywhw/a4cd19cda655b8249d908261a62687f8
+repo=$1
+filenamePattern="${2:-amd64.deb}"
+curl -s https://api.github.com/repos/$repo/releases/latest \
+       | grep "browser_download_url.*$filenamePattern" \
+       | cut -d : -f 2,3 \
+       | tr -d \" \
+       | wget -qi -
