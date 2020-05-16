@@ -2,7 +2,7 @@
 
 ## Requirements
 
-- [homeshick](https://github.com/andsens/homeshick).
+- [homeshick](https://github.com/andsens/homeshick)
 - zsh
 
 ## Install
