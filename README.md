@@ -16,15 +16,14 @@ printf '\nsource "$HOME/.homesick/repos/homeshick/homeshick.sh"' >> $HOME/.bashr
 
 - Install zsh (the install script needs it)
 
-- Clone this repo
+- Clone this repo with homeshick
 
 ```bash
-git clone https://github.com/skkeeper/dotfiles.git ~/.dotfiles
+homeshick clone skkeeper/dotfiles
 ```
 
 - Run `install.zsh`
 
 ```bash
-chmod +x install.zsh
-./install.zsh
+~/.dotfiles/install.zsh
 ```
