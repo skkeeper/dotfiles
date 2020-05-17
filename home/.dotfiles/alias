@@ -1,4 +1,4 @@
-[ -x "$(command -v lsd)" ] && alias ls='lsd'
+[ -x "$(command -v lsd)" ] && alias l='lsd'
 [ -x "$(command -v bat)" ] && alias cat='bat --paging=never'
 [ -x "$(command -v bat)" ] && alias less='bat --paging=always'
 
