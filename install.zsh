@@ -17,6 +17,7 @@ startDir=$(pwd)
 cd /tmp
 ~/.dotfiles/bin/gh-dl-release BurntSushi/ripgrep
 sudo dpkg -i ripgrep_*_amd64.deb
+rm ripgrep_*_amd64.deb
 
 ~/.dotfiles/bin/gh-dl-release dandavison/delta "git-delta_.*_amd64.deb" 
 sudo dpkg -i git-delta_*_amd64.deb
