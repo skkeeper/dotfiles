@@ -11,7 +11,9 @@ fi
 
 
 sudo apt-get update
-sudo apt-get install ripgrep fd-find silversearcher-ag bat -y
+sudo apt-get install fd-find silversearcher-ag bat -y
+# ripgrep package is broken on ubuntu, for now we download from github
+~/.dotfiles/bin/gh-dl-release BurntSushi/ripgrep
 
 # Install oh-my-zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
