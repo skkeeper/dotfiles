@@ -19,8 +19,8 @@ cd /tmp
 sudo dpkg -i ripgrep_*_amd64.deb
 
 ~/.dotfiles/bin/gh-dl-release dandavison/delta "git-delta_.*_amd64.deb" 
-sudo dpkg -i git-delta_.*_amd64.deb
-rm git-delta_.*_amd64.deb
+sudo dpkg -i git-delta_*_amd64.deb
+rm git-delta_*_amd64.deb
 
 cd "$startDir"
 
