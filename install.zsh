@@ -13,7 +13,16 @@ fi
 sudo apt-get update
 sudo apt-get install fd-find silversearcher-ag bat -y
 # ripgrep package is broken on ubuntu, for now we download from github
+startDir=$(pwd)
+cd /tmp
 ~/.dotfiles/bin/gh-dl-release BurntSushi/ripgrep
+sudo dpkg -i ripgrep_*_amd64.deb
+
+~/.dotfiles/bin/gh-dl-release dandavison/delta "git-delta_.*_amd64.deb" 
+sudo dpkg -i git-delta_.*_amd64.deb
+rm git-delta_.*_amd64.deb
+
+cd "$startDir"
 
 # Install oh-my-zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
