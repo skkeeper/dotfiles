@@ -25,5 +25,6 @@ homeshick clone skkeeper/dotfiles
 - Run `install.zsh`
 
 ```bash
-~/.dotfiles/install.zsh
+homeshick cd dotfiles
+./install.zsh
 ```
