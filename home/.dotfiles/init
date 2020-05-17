@@ -25,3 +25,5 @@ source ~/.dotfiles/env
 source ~/.dotfiles/alias
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+source "$HOME/.homesick/repos/homeshick/homeshick.sh"
