@@ -2,3 +2,4 @@
 [ -x "$(command -v bat)" ] && alias cat='bat --paging=never'
 [ -x "$(command -v bat)" ] && alias less='bat --paging=always'
 
+[ -x "$(command -v git)" ] && alias git-delete-merged='git branch --merged | grep -v "$(git rev-parse --abbrev-ref HEAD)" | xargs git branch -d'
