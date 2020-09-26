@@ -9,18 +9,27 @@ if ! [ -x "$(command -v git)" ]; then
   exit 1
 fi
 
+if [ -n "$(command -v apt-get)" ]; then
+  echo 'Assuming debian based distro'
+  sudo apt-get update
+  sudo apt-get install fd-find silversearcher-ag ripgrep bat tmux -y
+  
+  startDir=$(pwd)
+  cd /tmp
 
-sudo apt-get update
-sudo apt-get install fd-find silversearcher-ag ripgrep bat -y
+  ~/.dotfiles/bin/gh-dl-release dandavison/delta "git-delta_.*_amd64.deb" 
+  sudo dpkg -i git-delta_*_amd64.deb
+  rm git-delta_*_amd64.deb
 
-startDir=$(pwd)
-cd /tmp
+  cd "$startDir"
+fi
 
-~/.dotfiles/bin/gh-dl-release dandavison/delta "git-delta_.*_amd64.deb" 
-sudo dpkg -i git-delta_*_amd64.deb
-rm git-delta_*_amd64.deb
+if [ -n "$(command -v dnf)" ]; then
+   echo 'Assuming rpm based distro'
+  sudo dnf install fd-find the_silver_searcher ripgrep bat tmux git-delta -y
+fi
 
-cd "$startDir"
+
 
 # Install oh-my-zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
@@ -40,7 +49,6 @@ git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 ~/.fzf/install --no-key-bindings --no-completion --no-update-rc
 
 # Tmux
-sudo apt-get install tmux -y
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 ln -s .dotfiles/tmux.conf ~/.tmux.conf
 
