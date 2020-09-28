@@ -7,6 +7,7 @@ LineSpacing=2
 CursorShape=0
 
 [General]
+Command=/usr/bin/zsh
 Name=ZSH
 Parent=FALLBACK/
 TerminalCenter=true
