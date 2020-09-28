@@ -1,0 +1,11 @@
+[Desktop Entry]
+DefaultProfile=ZSH.profile
+
+[Favorite Profiles]
+Favorites=ZSH.profile
+
+[KonsoleWindow]
+ShowMenuBarByDefault=false
+
+[MainWindow]
+MenuBar=Disabled
