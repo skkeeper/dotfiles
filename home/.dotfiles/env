@@ -1,4 +1,4 @@
-PATH=$PATH:~/.dotfiles/bin:~/.local/bin:~/.cargo/bin
+PATH=~/.dotfiles/bin:~/.local/bin:~/.cargo/bin:$PATH
 
 [ -x "$(command -v nvim)" ] && export EDITOR=nvim
 
